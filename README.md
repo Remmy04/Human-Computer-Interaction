@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="/assets/github-header-banner.png" width="100%">
+</p>
+
 # 🧠 Human-Computer Interaction (HCI) – User-Centered Design & Prototyping
 
 This repository contains my work for the **Human-Computer Interaction (HCI)** module, where I explored how humans interact with digital systems and how to design intuitive, accessible, and user-centered interfaces.
