@@ -1,19 +1,23 @@
+<div align="center">
+
 # 🍽️ Replate – Sustainable Food Redistribution App  
-### 🚧 Project Page Coming Soon
+## ⚙️ **Project Page Coming Soon**
 
-Thank you for visiting the Replate project folder!  
-This section is currently being organized and updated. The full content will include:
+---
 
-- 📘 Project overview  
-- 👤 User personas  
-- 🎬 Storyboards  
-- ✏️ Low-fidelity wireframes  
-- 🎨 High-fidelity UI prototypes  
-- 🧪 Usability heuristics (Nielsen’s 10 principles)  
-- 📄 Full HCI assignment report  
-- 🌱 SDG 12 design justification  
-- 🧠 Skills and tools used in the design process  
+🚧 **This section is currently under development.**  
+The full Replate UI/UX case study will be published here soon, including:
 
-The complete documentation and design breakdown will be added here soon.
+✨ Project Overview  
+👤 Personas & Scenarios  
+🎬 Storyboards  
+✏️ Low-Fidelity Wireframes  
+🎨 High-Fidelity Prototypes  
+🧪 Usability Heuristics Evaluation  
+🌱 SDG 12 Design Rationale  
 
-✨ Please check back later for the full project details!
+---
+
+### 🔔 Stay tuned — full content will be uploaded shortly!
+
+</div>
