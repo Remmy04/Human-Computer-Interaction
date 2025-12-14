@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Replate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Canvas for animated visual effects using Canvas 2D API -->
+  <canvas id="visual-canvas" width="440" height="100" style="display: none;"></canvas>
+
+  <!-- Green particles visualization for sustainability theme -->
+  <div id="particle-container" class="particle-container"></div>
+
+  <!-- App frame to simulate phone width -->
+  <div class="app-frame">
+    <!-- HOME SCREEN (SCREEN 1) -->
+    <div id="home-screen" class="screen">
+      <!-- Top area: location + welcome -->
+      <header class="top-area">
+        <!-- Left: location icon -->
+        <div class="location-icon"></div>
+
+        <!-- Right: all top text + buttons so they align nicely -->
+        <div class="top-text-block">
+          <!-- Row 1: current location -->
+          <div class="location-text">
+            <p class="location-label">CURRENT LOCATION</p>
+                <p class="location-address gradient-text">
+                    1, Jln Taylors, 47500 Subang Jaya, Selangor
+                </p>
+          </div>
+
+          <!-- Row 2: welcome + icons -->
+          <div class="top-welcome-row">
+            <div class="welcome-left">
+              <p class="welcome-subtitle">Welcome Back,</p>
+              <p class="welcome-name gradient-text">User 1</p>
+            </div>
+            <div class="top-icons">
+              <button class="icon-circle icon-search" aria-label="Search"></button>
+              <button class="icon-circle icon-bell" aria-label="Notifications"></button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <main class="content">
+        <!-- Hero banner -->
+        <section class="hero-banner">
+          <div class="hero-content">
+            <p class="hero-title">
+              Start collecting your GreenPoints today to unlock rewards!
+            </p>
+            <button class="hero-button">Daily Check In</button>
+          </div>
+        </section>
+
+        <!-- Discovery -->
+        <section class="discovery">
+          <div class="section-header">
+            <h2 class="section-title gradient-text">Discovery</h2>
+            <span class="section-arrow">&rsaquo;</span>
+          </div>
+          <p class="section-subtitle">More than 50% off</p>
+
+          <div class="discovery-cards">
+            <!-- Sushi card (clickable) -->
+            <article id="card-sushi" class="item-card clickable">
+              <div class="item-image-wrapper">
+                <img
+                  src="assets/images/sushi.jpg"
+                  alt="Sushi"
+                  class="item-image"
+                />
+                <span class="discount-pill">50% off</span>
+              </div>
+              <div class="item-info">
+                <div class="item-row">
+                  <p class="item-name">Sushi</p>
+                  <p class="item-price">rm 4.50</p>
+                </div>
+                <p class="item-meta">Freshness Level ★★★★☆</p>
+              </div>
+            </article>
+
+            <!-- Bread card (static) -->
+            <article class="item-card">
+              <div class="item-image-wrapper">
+                <img
+                  src="assets/images/bread.jpg"
+                  alt="Bread"
+                  class="item-image"
+                />
+                <span class="discount-pill">70% off</span>
+              </div>
+              <div class="item-info">
+                <div class="item-row">
+                  <p class="item-name">Bread</p>
+                  <p class="item-price">rm 6.50</p>
+                </div>
+                <p class="item-meta">Freshness Level ★★★★☆</p>
+              </div>
+            </article>
+
+            <!-- Cake card (static) -->
+            <article class="item-card">
+              <div class="item-image-wrapper">
+                <img
+                  src="assets/images/cake.jpg"
+                  alt="Cake"
+                  class="item-image"
+                />
+                <span class="discount-pill">50% off</span>
+              </div>
+              <div class="item-info">
+                <div class="item-row">
+                  <p class="item-name">Cake</p>
+                  <p class="item-price">rm 8.00</p>
+                </div>
+                <p class="item-meta">Freshness Level ★★★★☆</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Previously visited shops -->
+        <section class="shops">
+          <div class="section-header">
+            <h2 class="section-title gradient-text">Previously Visited Shops</h2>
+            <span class="section-arrow">&rsaquo;</span>
+          </div>
+
+          <div class="shop-cards">
+            <!-- Cafe Doving -->
+            <article class="shop-card">
+              <div class="shop-top">
+                <span class="rating-pill">4.8 ★</span>
+              </div>
+              <div class="shop-logo-wrapper">
+                <img
+                  src="assets/images/cafe-doving.jpg"
+                  alt="Cafe Doving"
+                  class="shop-logo"
+                />
+              </div>
+              <div class="shop-info">
+                <p class="shop-name">Cafe Doving</p>
+                <p class="shop-meta">Pick-up available · 25–30mins</p>
+                <p class="shop-tags">Bread · Pastry</p>
+              </div>
+            </article>
+
+            <!-- Tamashii -->
+            <article class="shop-card">
+              <div class="shop-top">
+                <span class="rating-pill">4.8 ★</span>
+              </div>
+              <div class="shop-logo-wrapper">
+                <img
+                  src="assets/images/tamashii.jpg"
+                  alt="Tamashii"
+                  class="shop-logo"
+                />
+              </div>
+              <div class="shop-info">
+                <p class="shop-name">Tamashii</p>
+                <p class="shop-meta">Pick-up available · 25–30mins</p>
+                <p class="shop-tags">Sushi · Japanese</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Latest community posts -->
+        <section class="community">
+          <div class="section-header">
+            <h2 class="section-title gradient-text">Latest Community Posts</h2>
+            <span class="section-arrow">&rsaquo;</span>
+          </div>
+
+          <div class="community-card">
+            <p class="community-title">
+              New food bank collection, available from 9:00pm to 10:00pm.
+            </p>
+            <p class="community-meta">
+              Giving out baked goods from @shop-1
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Bottom navigation -->
+      <nav class="bottom-nav">
+        <button class="nav-item nav-item-active">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item">
+          <span class="nav-icon">🛍️</span>
+          <span class="nav-label">Shops</span>
+        </button>
+        <button class="nav-item">
+          <span class="nav-icon">🛒</span>
+          <span class="nav-label">Cart</span>
+        </button>
+        <button class="nav-item">
+          <span class="nav-icon">💬</span>
+          <span class="nav-label">Community</span>
+        </button>
+        <button class="nav-item">
+          <span class="nav-icon">👤</span>
+          <span class="nav-label">Profile</span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- ITEM DETAILS OVERLAY (SCREEN 2) -->
+    <div id="item-overlay" class="overlay hidden" aria-hidden="true">
+      <!-- Background image area -->
+      <div class="overlay-image-area">
+        <img
+          src="assets/images/sushi.jpg"
+          alt="Sushi close-up"
+          class="overlay-image"
+        />
+
+        <div class="overlay-top-bar">
+          <button id="btn-back" class="back-button">&larr;</button>
+          <span class="overlay-title">Item Details</span>
+        </div>
+      </div>
+
+      <!-- Bottom sheet content -->
+      <div class="overlay-sheet">
+        <div class="overlay-sheet-inner">
+          <h1 class="item-title">Sushi</h1>
+          <p class="item-subtitle">Tamashii</p>
+
+          <div class="price-row">
+            <span class="currency gradient-text">RM</span>
+            <span id="price-value" class="price-value gradient-text">4.50</span>
+            <span class="original-price">Original Price 9.00</span>
+          </div>
+
+          <div class="detail-list">
+            <div class="detail-row">
+              <span class="detail-label">Freshness Level</span>
+              <span class="detail-value">★★★★☆</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Time Prepared</span>
+              <span class="detail-value">9:00am</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Best Before</span>
+              <span class="detail-value">9:00pm</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Microwavable</span>
+              <span class="detail-value">✓</span>
+            </div>
+          </div>
+
+          <div class="description-block">
+            <h3 class="description-title">Description</h3>
+            <p class="description-text">
+              Freshly rolled Tamashii sushi packed with crisp vegetables and rich flavour.
+              Perfect for a light, satisfying meal any time of the day.
+            </p>
+          </div>
+
+          <div class="quantity-row">
+            <button id="btn-minus" class="qty-button">−</button>
+            <span id="qty-display" class="qty-display">1</span>
+            <button id="btn-plus" class="qty-button">+</button>
+          </div>
+
+          <button id="btn-add-to-cart" class="add-to-cart-button">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS NOTIFICATION (SCREEN 3) -->
+    <div
+      id="success-notification"
+      class="notification hidden"
+      aria-hidden="true"
+    >
+      <div class="notification-card">
+        <p class="notif-title">✓ Successfully added to cart!</p>
+        <p class="notif-body">Your item has been added to your cart.</p>
+        <button id="btn-view-cart" class="notif-link">
+          View your cart &rsaquo;
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIO -->
+  <audio
+    id="sound-click"
+    src="assets/audio/mouse-click.mp3"
+    preload="auto"
+  ></audio>
+  <audio
+    id="sound-minus"
+    src="assets/audio/add-minus.mp3"
+    preload="auto"
+  ></audio>
+  <audio
+    id="sound-notification"
+    src="assets/audio/notification.mp3"
+    preload="auto"
+  ></audio>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
